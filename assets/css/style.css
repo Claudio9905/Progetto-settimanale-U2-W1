@@ -9,9 +9,9 @@ header {
   background-color: #ffc017;
   background-image: url(../img/M.gif);
   background-repeat: no-repeat;
-  background-position-x: right;
-  background-position-y: bottom;
-  background-size: 25em;
+  background-position-x: 26em;
+  background-position-y: 4em;
+  background-size: 46em;
 }
 
 header nav {
@@ -492,6 +492,15 @@ main #bottom-section article .icona2 img:nth-child(2) {
 }
 
 @media screen and (min-width: 1200px) {
+  header {
+    background-color: #ffc017;
+    background-image: url(../img/M.gif);
+    background-repeat: no-repeat;
+    background-position-x: 32em;
+    background-position-y: 4em;
+    background-size: 46em;
+  }
+
   main #mid-section {
     margin-bottom: 0.5em;
     margin-top: 3em;
@@ -516,6 +525,15 @@ main #bottom-section article .icona2 img:nth-child(2) {
 }
 
 @media screen and (min-width: 1440px) {
+  header {
+    background-color: #ffc017;
+    background-image: url(../img/M.gif);
+    background-repeat: no-repeat;
+    background-position-x: 35em;
+    background-position-y: 4em;
+    background-size: 59em;
+  }
+
   main #main-section {
     display: flex;
     flex-direction: column;
@@ -543,7 +561,7 @@ main #bottom-section article .icona2 img:nth-child(2) {
     font-family: "Roboto", sans-serif;
     position: absolute;
     width: 33em;
-    bottom: -9em;
+    bottom: -16em;
     right: 9em;
   }
 
