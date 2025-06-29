@@ -21,6 +21,14 @@ header nav {
   justify-content: space-between;
   padding: 1em;
   align-items: center;
+  position: fixed;
+  z-index: 5;
+  background-color: #ffc017;
+  width: 100%;
+}
+
+header #header-section div {
+  margin-top: 2em;
 }
 
 header nav #logo {
@@ -32,6 +40,7 @@ header nav ul {
   display: flex;
   list-style-type: none;
   align-items: center;
+  margin-right: 1.3em;
 }
 
 header nav ul li a {
@@ -62,7 +71,7 @@ header nav ul li .buttonStart {
 
 header #header-section {
   padding: 1em;
-  height: 17em;
+  height: 19em;
   border-bottom: 1px solid black;
   box-shadow: 0px 1px 1px 0px #0000005d;
   display: flex;
@@ -235,25 +244,27 @@ main #mid-section .boxThemes .linkThemes a {
   font-size: 0.7em;
 }
 
+main #mid-section .infoLink {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 1em;
+  width: 23em;
+  margin-left: 1.6em;
+  margin-top: 1em;
+}
+
+main #mid-section .infoLink a {
+  text-decoration: none;
+  color: rgb(78, 77, 77);
+  opacity: 0.8;
+  font-size: 0.7em;
+}
 /* lavoro sul bottom section */
 
 main #bottom-section {
   padding: 1em;
   font-family: "Roboto", sans-serif;
-}
-
-main #bottom-section .infoLink {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-bottom: 1em;
-}
-
-main #bottom-section .infoLink a {
-  text-decoration: none;
-  color: rgb(78, 77, 77);
-  opacity: 0.8;
-  font-size: 0.7em;
 }
 
 main #bottom-section article {
@@ -372,16 +383,43 @@ main #bottom-section article .icona2 img:nth-child(2) {
 }
 
 @media screen and (min-width: 700px) {
+  @keyframes navMore {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0.5%;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
   .tablet-desktop {
     margin-right: 1.5em;
     text-decoration: none;
     color: #191919;
     font-size: 0.7em;
     font-family: "Roboto", sans-serif;
+    animation: navMore 0.5s linear 1 0s;
   }
 
   header #header-section div {
     width: 28em;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-right: 2.3em;
+  }
+
+  nav #logo {
+    width: 7em;
+    margin-left: 3.5em;
   }
 
   main #main-section {
@@ -419,13 +457,14 @@ main #bottom-section article .icona2 img:nth-child(2) {
     margin-left: 4em;
   }
 
-  main #bottom-section .infoLink {
+  main #mid-section .infoLink {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 1em;
-    width: 29em;
-    margin-left: 0em;
+    width: 23em;
+    margin-left: 11.6em;
+    margin-top: 1em;
   }
 }
 
@@ -437,34 +476,60 @@ main #bottom-section article .icona2 img:nth-child(2) {
     margin-top: 1em;
     border-bottom: 1px solid #53525233;
     font-family: "Roboto", sans-serif;
+    margin-left: 0;
+    width: 61em;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-right: 3.3em;
+  }
+
+  nav #logo {
+    width: 7em;
+    margin-left: 3.5em;
+  }
+
+  main #main-section .boxTitle {
+    display: flex;
+    align-items: center;
     margin-left: 3em;
-    width: 56em;
+  }
+
+  main #main-section article {
+    display: flex;
+    margin-left: 3em;
+  }
+
+  main #mid-bottom-section {
+    display: flex;
+    flex-direction: row-reverse;
   }
 
   main #bottom-section {
     padding: 1em;
     font-family: "Roboto", sans-serif;
     margin-left: 4em;
-    position: absolute;
     width: 25em;
-    top: 57em;
   }
 
   main #mid-section {
     margin-bottom: 0.5em;
     margin-top: 3em;
     font-family: "Roboto", sans-serif;
-    position: absolute;
-    right: 5em;
-    bottom: -26em;
     width: 33em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   main #mid-section h3 {
     font-size: 0.7em;
     font-weight: bold;
     margin-top: 2em;
-    margin-left: 8.5em;
+    margin-left: 3.7em;
   }
 
   main #mid-section .boxThemes {
@@ -473,21 +538,19 @@ main #bottom-section article .icona2 img:nth-child(2) {
     flex-wrap: wrap;
     justify-content: space-around;
     padding: 1em;
-    width: 30em;
-    margin-left: 5em;
+    width: 29em;
+    margin-left: 1em;
     height: 6em;
   }
 
-  main #bottom-section .infoLink {
+  main #mid-section .infoLink {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 1em;
     width: 29em;
-    margin-left: 0em;
-    top: 12em;
-    position: absolute;
-    left: 28em;
+    margin-left: 2em;
+    margin-top: 1em;
   }
 }
 
@@ -501,26 +564,61 @@ main #bottom-section article .icona2 img:nth-child(2) {
     background-size: 46em;
   }
 
+  header #header-section div {
+    margin-left: 3.5em;
+  }
+
+  header nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    margin-right: 5em;
+  }
+
+  header nav #logo {
+    width: 7em;
+    margin-left: 4em;
+  }
+
+  main #main-section {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em;
+    margin-top: 1em;
+    border-bottom: 1px solid #53525233;
+    font-family: "Roboto", sans-serif;
+    margin-left: 0;
+    width: 72em;
+  }
+
+  main #mid-bottom-section {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 4.5em;
+  }
+
   main #mid-section {
     margin-bottom: 0.5em;
     margin-top: 3em;
     font-family: "Roboto", sans-serif;
-    position: absolute;
-    right: 14em;
-    bottom: -27em;
     width: 33em;
   }
 
-  main #bottom-section .infoLink {
+  main #mid-section .infoLink {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 1em;
     width: 29em;
-    margin-left: 0em;
-    top: 12em;
-    position: absolute;
-    left: 30.5em;
+    margin-left: 2em;
+  }
+
+  main #bottom-section {
+    padding: 1em;
+    font-family: "Roboto", sans-serif;
+    margin-left: 4em;
+    width: 25em;
+    margin-right: 3em;
   }
 }
 
@@ -541,35 +639,35 @@ main #bottom-section article .icona2 img:nth-child(2) {
     margin-top: 1em;
     border-bottom: 1px solid #53525233;
     font-family: "Roboto", sans-serif;
-    margin-left: 3em;
-    width: 81em;
+    margin-left: 0;
+    width: 87em;
+  }
+
+  main #mid-bottom-section {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
   }
 
   main #bottom-section {
     padding: 1em;
     font-family: "Roboto", sans-serif;
     margin-left: 4em;
-    position: absolute;
     width: 31em;
-    top: 57em;
-    left: 11em;
   }
 
   main #mid-section {
     margin-bottom: 0.5em;
     margin-top: 3em;
     font-family: "Roboto", sans-serif;
-    position: absolute;
     width: 33em;
-    bottom: -16em;
-    right: 9em;
   }
 
   main #mid-section h3 {
-    font-size: 0.7em;
+    font-size: 0.8em;
     font-weight: bold;
     margin-top: 2em;
-    margin-left: 8.5em;
+    margin-left: 3.3em;
   }
 
   main #mid-section .boxThemes {
@@ -579,20 +677,16 @@ main #bottom-section article .icona2 img:nth-child(2) {
     justify-content: space-around;
     padding: 1em;
     width: 30em;
-    margin-left: 5em;
+    margin-left: 1em;
     height: 6em;
   }
 
-  main #bottom-section .infoLink {
+  main #mid-section .infoLink {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 1em;
     width: 29em;
-    margin-left: 0em;
-    top: 12em;
-    position: absolute;
-
-    left: 39.5em;
+    margin-left: 2.5em;
   }
 }
